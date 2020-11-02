@@ -1,5 +1,6 @@
 <?php 
 require_once "./elements/connexion.php";
+require_once "./depenses/traitement.php";
         $uuu= ["janvier" =>["produit" => 200000,"produt" => 200000,"prodt" => 200000],
         "fevrier" =>["prot" => 200000,"prduit" => 200000,"produ" => 200000],
         "mars" =>["prodt" => 200000,"roduit" => 200000,"oduit" => 200000]

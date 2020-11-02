@@ -238,10 +238,7 @@ td:nth-child(5n+8){
 .action {
     color: whitesmoke;
 }
-li {
-    display: inline;
-    text-align: end;
-}
+
 /* End Bien et servvice section */
 
 /* Footer section */
