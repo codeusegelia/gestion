@@ -238,6 +238,13 @@ td:nth-child(5n+8){
 .action {
     color: whitesmoke;
 }
+.uuu{
+    height:80px;
+    display:inline-block;
+    width:100%;
+    
+}
+
 
 /* End Bien et servvice section */
 
@@ -311,35 +318,6 @@ td:nth-child(5n+8){
         max-width: 1000px;
     }
 }
-@media (max-width: 600px) {
-    table tr th:nth-of-type(20),
-    table tr td:nth-of-type(10) {
-        display: none;
-    }
-}
-@media (max-width: 600px) {
-    table tr th:nth-of-type(20),
-    table tr td:nth-of-type(3) {
-        display: none;
-    }
-}
-@media (max-width: 600px) {
-    table tr th:nth-of-type(20),
-    table tr td:nth-of-type(4) {
-        display: none;
-    }
-}
-@media (max-width: 500px) {
-    table tr th:nth-of-type(20),
-    table tr td:nth-of-type(2) {
-        display: none;
-    }
-}
-@media (max-width: 400px) {
-    table tr th:nth-of-type(20),
-    table tr td:nth-of-type(2) {
-        display: none;
-    }
-}
+
 
 /* End Media query for desktop tab */

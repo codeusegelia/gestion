@@ -1,5 +1,5 @@
 <?php
-  require_once "./elements/connexion.php";
+  require_once "../elements/connexion.php";
  
 
   //On sélectionne les éléments pour les afficher

@@ -1,91 +1,75 @@
+<link rel="stylesheet" href="./elements/bootstrap.min.css"/>
 <link rel="stylesheet" href="./elements/style.css">
-<link rel="stylesheet" href="./elements/bootstrap.min.css">
 
-<?php  require_once "./depenses/traitement.php" ?>
+<?php  
+
+    require_once "./elements/connexion.php";
+
+    $str_query_depense = " SELECT * FROM bienetservice";
+    $query_depense = $connexion->prepare($str_query_depense);
+    $query_depense->execute();
+    $list_depenses = $query_depense->fetchAll(2);
+
+    $mois = [' ','Janv.', 'Fevr.', 'Mars', 'Avril', 'Mai', 'Juin', 'Juill.', 'Aout', 'Sept.', 'Oct.', 'Nov.', 'Dec.']
+?>
 <section id="bien" class="bien">
+    <div class="container-fluid">
+        <div class="contatiner">
     <article class="col-xs-12 col-xm-12  col-md-12 col-lg-12">
         <h1 class="bien-info-heading">Dépense par bien et service</h1>
-        <table style="width: 1325px;">
+        <table style="width: 1325px;" class="table table-striped">
             <thead>
                 <tr>
-                    <th></th>
-                    <th>Janv.</th>
-                    <th>Fevr.</th>
-                    <th>Mars</th>
-                    <th>Avril</th>
-                    <th>Mai</th>
-                    <th>Juin</th>
-                    <th>Juill.</th>
-                    <th>Aout</th>
-                    <th>Sept.</th>
-                    <th>Oct.</th>
-                    <th>Nov.</th>
-                    <th>Dec.</th>
+                    <?php foreach($mois as $month): ?>
+                        <th> <?= $month ?></th>
+                    <?php endforeach ?>
                 </tr>
 
                 <tr>
                     <td>
-                        <?php foreach($jointures as $jointure): ?>
-                            <?= $jointure['designation_biens_services'] ?>
+                        <?php foreach($list_depenses as  $value): ?>
+                           <div > <?= $value['designation_biens_services']  ?> </div>
                         <?php endforeach ?>
                     </td>
-                    <td><?= somme_par_mois(1)?></td>
-                    <td><?= somme_par_mois(2)?></td>
-                    <td><?= somme_par_mois(3)?></td>
-                    <td><?= somme_par_mois(4)?></td>
-                    <td><?= somme_par_mois(5)?></td>
-                    <td><?= somme_par_mois(6)?></td>
-                    <td><?= somme_par_mois(7)?></td>
-                    <td><?= somme_par_mois(8)?></td>
-                    <td><?= somme_par_mois(9)?></td>
-                    <td><?= somme_par_mois(10)?></td>
-                    <td><?= somme_par_mois(11)?></td>
-                    <td><?= somme_par_mois(12)?></td>
+                    
+                    <?php for($i=1; $i<=12; $i++): ?>
+                        <td> 
+                            <div class="uuu"> 
+                                <?= somme_par_mois($i) ?> 
+                            </div>
+                        </td>
+                    <?php endfor ?>
                 </tr>
         </table>
     </article> <br>
     
     <!-- SOMME TOTALE -->
-    <article class="col-xs-12 col-xm-12  col-md-12 col-lg-12">
         <h1 class="bien-info-heading">Total Dépenses</h1>
-        <table style="width: 1325px;">
+        <table style="width: 1325px;" class="table table-striped">
             <thead>
                 <tr>
-                    <th></th>
-                    <th>Janv.</th>
-                    <th>Fevr.</th>
-                    <th>Mars</th>
-                    <th>Avril</th>
-                    <th>Mai</th>
-                    <th>Juin</th>
-                    <th>Juill.</th>
-                    <th>Aout.</th>
-                    <th>Sept.</th>
-                    <th>Oct.</th>
-                    <th>Nov.</th>
-                    <th>Dec.</th>
+                    <?php foreach($mois as $month): ?>
+                        <th> <?= $month ?></th>
+                    <?php endforeach ?>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Biens/<br>Services</td>
-                        <td><?= somme_total(1) ?></td>
-                        <td><?= somme_total(2) ?></td> 
-                        <td><?= somme_total(3) ?></td> 
-                        <td><?= somme_total(4) ?></td> 
-                        <td><?= somme_total(5) ?></td> 
-                        <td><?= somme_total(6) ?></td> 
-                        <td><?= somme_total(7) ?></td> 
-                        <td><?= somme_total(8) ?></td> 
-                        <td><?= somme_total(9) ?></td> 
-                        <td><?= somme_total(10) ?></td> 
-                        <td><?= somme_total(11) ?></td> 
-                        <td><?= somme_total(12) ?></td>  
+                        <?php for ($i=1; $i <=12 ; $i++): ?>
+                            <td><?= somme_total($i) ?></td>
+                        <?php endfor ?>
                     </tr>
             </tbody>
-        </table>
-    </article> <br>
-</section> <br>
+        </table> <br> <br>
+        <form action="./index.php" method="">
+        <button class="btn btn-primary" type="submit" >Retour</button> <br> <br>
+        </form>
+    </article>
+</section> 
+</div>
+</div> 
+
 
 
 

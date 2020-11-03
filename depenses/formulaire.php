@@ -1,5 +1,6 @@
+
 <?php 
-    require_once "./elements/connexion.php";
+    require_once "../elements/connexion.php";
 
     $id = isset($_POST['id_biens_services']) ? $_POST['id_biens_services'] : '';
     $montant = isset($_POST['montant']) ? $_POST['montant'] : '';
