@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="../elements/style.css">
 
 <!-- Footer section --> 
-<div class= "bien">
+
     <footer id="footer" class="footer container">
         <div class="footer-contact">
             <h1 class="footer-contact-heading">Contacts</h1>
@@ -18,7 +18,7 @@
             </div>
         </div>
     </footer>
-</div>
+
 <!-- End Footer section -->
 
 </body>

@@ -190,8 +190,8 @@ table{
     margin-top: 50px;
     font-family: Arial;
     color: #fff;
-    
 }
+
 table, th, td {
     border: 1px dotted white;
     border-collapse: collapse;
@@ -199,10 +199,13 @@ table, th, td {
     font-size: 20px;
     margin-bottom: 30px;
 }
+
+
 th {
     background: purple;
     padding: 30px;
     text-transform: uppercase;
+   
 }
 td:nth-child(5n+1){
     background: red;

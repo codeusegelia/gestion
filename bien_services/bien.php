@@ -12,7 +12,7 @@
         <h1 class="bien-info-heading">Gestion Des Biens Et Services</h1>
         <table class="table table-striped"> 
             <thead>
-                <tr>
+                <tr class="text-white">
                     <th>ID</th>
                     <th>Designation</th>
                     <th>Description</th>
@@ -21,7 +21,7 @@
             </thead>
             <tbody>
                 <?php foreach($resultats as $resultat): ?>
-                    <tr>
+                    <tr class="text-white">
                         <td><?= $resultat['id_biens_services'] ?></td>
                         <td><?= $resultat['designation_biens_services'] ?></td>
                         <td><?= $resultat['description_biens_services'] ?></td>

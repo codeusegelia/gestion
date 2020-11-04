@@ -13,7 +13,7 @@
         <h1 class="bien-info-heading">Gestion Des Biens Et Services</h1>
         <table class="table table-striped">
             <thead>
-                <tr>
+                <tr class="text-white">
                     <th>Biens et services</th>
                     <th>Montant</th>
                     <th>Date</th>
@@ -21,7 +21,7 @@
             </thead>
             <tbody>
                 <?php foreach($jointures as $resultat): ?>
-                    <tr>
+                    <tr class="text-white">
                         <td><?= $resultat['designation_biens_services'] ?></td>
                         <td><?= number_format($resultat['montant'], 0 , ',', ' ') ; ?> FCFA </td>
                         <td><?= $resultat['date_depenses'] ?></td>

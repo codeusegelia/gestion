@@ -26,12 +26,12 @@
 <h1 class="bien-info-heading">Formulaire</h1>
 <form action="" method="post">
     <div class="form-group">
-        <input class="form-control" type="number" min="0" name="montant" id="montant" value="<?= $montant ?>" placeholder="Entrez le montant" size="100" style="height:100px;"/>
+        <input class="form-control" type="number" min="0" name="montant" id="montant" value="<?= $montant ?>" placeholder="Entrez le montant"  style=" font-size:30px;font-family: Verdana;text-align:center;color:chartreuse"/>
     </div>
     <div class="form-group">
-        <select class="form-control" name="id_biens_services" >
+        <select class="form-control" name="id_biens_services" style=" font-size:30px;font-family: Verdana;text-align:center;color:chartreuse">
             <?php foreach($list_depenses as $depense): ?>
-                <option  value="<?= $depense['id_biens_services'] ?>"><?= $depense['designation_biens_services'] ?></option>
+                <option  value="<?= $depense['id_biens_services'] ?>" ><?= $depense['designation_biens_services'] ?></option>
             <?php endforeach ?>
         </select>
     </div>

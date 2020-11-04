@@ -17,9 +17,9 @@
         <div class="contatiner">
     <article class="col-xs-12 col-xm-12  col-md-12 col-lg-12">
         <h1 class="bien-info-heading">Dépense par bien et service</h1>
-        <table style="width: 1325px;" class="table table-striped">
+        <table  class="table table-striped">
             <thead>
-                <tr>
+                <tr class="text-white">
                     <?php foreach($mois as $month): ?>
                         <th> <?= $month ?></th>
                     <?php endforeach ?>
@@ -28,13 +28,15 @@
                 <tr>
                     <td>
                         <?php foreach($list_depenses as  $value): ?>
-                           <div > <?= $value['designation_biens_services']  ?> </div>
+                            <div class="text-white"> 
+                               <?= $value['designation_biens_services']  ?> 
+                            </div>
                         <?php endforeach ?>
                     </td>
                     
                     <?php for($i=1; $i<=12; $i++): ?>
                         <td> 
-                            <div class="uuu"> 
+                            <div class="text-white">
                                 <?= somme_par_mois($i) ?> 
                             </div>
                         </td>
@@ -45,19 +47,19 @@
     
     <!-- SOMME TOTALE -->
         <h1 class="bien-info-heading">Total Dépenses</h1>
-        <table style="width: 1325px;" class="table table-striped">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <?php foreach($mois as $month): ?>
-                        <th> <?= $month ?></th>
+                        <th class="text-white"> <?= $month ?></th>
                     <?php endforeach ?>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Biens/<br>Services</td>
+                    <td class="text-white">Biens/<br>Services</td>
                         <?php for ($i=1; $i <=12 ; $i++): ?>
-                            <td><?= somme_total($i) ?></td>
+                            <td class="text-white"><?= somme_total($i) ?></td>
                         <?php endfor ?>
                     </tr>
             </tbody>
